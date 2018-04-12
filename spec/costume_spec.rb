@@ -37,6 +37,7 @@ describe "Costume" do
 
   it "knows when it was created" do
     bee = Costume.create(name: "Dog's Bumble Bee", image_url: "http://cdn.sheknows.com/filter/l/gallery/halloween_costume_dog_bumblebee.jpg",size: "medium")
+    # binding.pry
     expect { bee.created_at }.to_not raise_error
     expect(bee.created_at.to_datetime === Time.now.utc.to_datetime).to eq(true)
   end
